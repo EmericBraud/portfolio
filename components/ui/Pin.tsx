@@ -28,8 +28,9 @@ export const PinContainer = ({
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
   const onMouseClick = () => {
-    if (href)
+    if (href && typeof window !== 'undefined') {
       window.open(href, '_blank');
+    }
   }
 
   return (
